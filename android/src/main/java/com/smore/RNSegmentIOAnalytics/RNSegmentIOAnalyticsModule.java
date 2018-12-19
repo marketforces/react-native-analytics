@@ -12,6 +12,7 @@ import com.segment.analytics.Analytics.Builder;
 import com.segment.analytics.Properties;
 import com.segment.analytics.Traits;
 import com.segment.analytics.Options;
+import com.segment.analytics.android.integrations.appboy.AppboyIntegration;
 import android.util.Log;
 import android.content.Context;
 
@@ -43,6 +44,7 @@ public class RNSegmentIOAnalyticsModule extends ReactContextBaseJavaModule {
       Builder builder = new Analytics.Builder(context, writeKey);
       builder.flushQueueSize(flushAt);
       builder.trackApplicationLifecycleEvents();
+      builder.use(AppboyIntegration.FACTORY);
 
       if (mDebug) {
         builder.logLevel(Analytics.LogLevel.DEBUG);
