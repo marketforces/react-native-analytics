@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:0.19.+'
+    compile 'com.facebook.react:react-native:+'
     compile 'com.segment.analytics.android:analytics:4+'
     compile 'com.appboy:appboy-segment-integration:+'
 }
